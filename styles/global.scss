@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  @apply bg-slate-100;
+}
+
+.btn {
+  @apply hover:bg-gray-400 border border-collapse border-black text-gray-100 bg-gray-600 font-medium text-3xl px-5 py-10  focus:outline-none transition-all duration-200 ease-in-out;
+  &-operator {
+    @apply bg-amber-500 hover:bg-amber-700;
+  }
+  &-ac {
+    @apply bg-red-700 hover:bg-red-900;
+  }
+  &-del {
+    @apply bg-red-500 hover:bg-red-900;
+  }
+}
+
+.calc-grid {
+  @apply grid grid-cols-4 p-5;
+}
+
+.output {
+  @apply text-right bg-gray-800 col-span-full p-4 min-h-[120px] h-full flex flex-col items-end gap-2 break-all break-words rounded-tr rounded-tl justify-around;
+  &-previous-operand {
+    @apply text-gray-200 text-base;
+  }
+  &-current-operand {
+    @apply text-gray-50 text-5xl;
+  }
+}
